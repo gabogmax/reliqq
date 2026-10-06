@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8;
+  color: #1c2b36;
+  line-height: 1.6;
+}
+
+.titulo-secao {
+  max-width: 960px;
+  margin: 40px auto 16px;
+}
+
+/* GRID DE 12 COLUNAS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.col-12 { grid-column: span 12; }
+.col-9  { grid-column: span 9; }
+.col-6  { grid-column: span 6; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
+
+/* DEMONSTRAÇÃO */
+.demo > div {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  color: hsl(212, 80%, 42%);
+}
+
+/* EXERCÍCIO: BLOG */
+.blog-header,
+.blog-footer {
+  background: #1565c0;
+  color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.blog-footer {
+  text-align: center;
+}
+
+.sidebar {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 8px;
+  color: #1565c0;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  color: #1c2b36;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.conteudo {
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.conteudo h2 {
+  margin-bottom: 8px;
+}
+
+.conteudo p {
+  margin-bottom: 16px;
+}
+
+.conteudo .data {
+  color: #607d8b;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVO: no celular, tudo ocupa 12 colunas */
+@media (max-width: 700px) {
+  .col-9,
+  .col-6,
+  .col-4,
+  .col-3 {
+    grid-column: span 12;
+  }
+}

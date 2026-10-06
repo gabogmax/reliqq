@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tópico 3 - Grid System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- DEMONSTRAÇÃO DO GRID DE 12 COLUNAS -->
+  <h2 class="titulo-secao">Demonstração: grid de 12 colunas</h2>
+  <div class="grid-container demo">
+    <div class="col-12">Header (12 colunas)</div>
+    <div class="col-6">Metade esquerda (6)</div>
+    <div class="col-6">Metade direita (6)</div>
+    <div class="col-4">1/3 (4)</div>
+    <div class="col-4">1/3 (4)</div>
+    <div class="col-4">1/3 (4)</div>
+  </div>
+
+  <!-- EXERCÍCIO: LAYOUT DE BLOG (sidebar 3 + conteúdo 9) -->
+  <h2 class="titulo-secao">Exercício: layout de blog</h2>
+  <div class="grid-container blog">
+
+    <header class="col-12 blog-header">
+      <h1>Meu Blog</h1>
+    </header>
+
+    <aside class="col-3 sidebar">
+      <h3>Categorias</h3>
+      <ul>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Código</a></li>
+        <li><a href="#">Inspiração</a></li>
+        <li><a href="#">Tutoriais</a></li>
+      </ul>
+
+      <h3>Posts recentes</h3>
+      <ul>
+        <li><a href="#">Como usar CSS Grid</a></li>
+        <li><a href="#">Escala de espaçamento</a></li>
+        <li><a href="#">Tipografia na web</a></li>
+      </ul>
+    </aside>
+
+    <main class="col-9 conteudo">
+      <article>
+        <h2>Entendendo o Grid System</h2>
+        <p class="data">06 de outubro de 2026</p>
+        <p>Um grid de 12 colunas divide a largura da página em partes iguais. Cada elemento ocupa um número de colunas, e o espaço entre elas (gap) mantém tudo organizado.</p>
+        <p>Neste layout, a sidebar ocupa 3 colunas e o conteúdo ocupa 9, somando as 12 do grid.</p>
+      </article>
+    </main>
+
+    <footer class="col-12 blog-footer">
+      <p>&copy; 2026 Meu Blog</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
