@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESCALA DE ESPAÇAMENTO (múltiplos de 8px)
+   Margin = espaço FORA | Padding = espaço DENTRO */
+:root {
+  --espaco-1: 8px;
+  --espaco-2: 16px;
+  --espaco-3: 24px;
+  --espaco-4: 32px;
+  --espaco-6: 48px;
+  --espaco-8: 64px;
+}
+
+body {
+  font-family: sans-serif;
+  padding: var(--espaco-6);
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.5;
+}
+
+.titulo-secao {
+  max-width: 900px;
+  margin: var(--espaco-8) auto var(--espaco-3);
+}
+
+/* DEMONSTRAÇÃO */
+.spacing-demo {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.box {
+  background: #ffcc80;
+  color: #e65100;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: var(--espaco-2);
+  border: 1px solid #ffe0b2;
+}
+
+.box-small   { padding: var(--espaco-1); }
+.box-medium  { padding: var(--espaco-2); }
+.box-large   { padding: var(--espaco-4); }
+.box-xlarge  { padding: var(--espaco-8); }
+
+/* EXERCÍCIO: CARDS DE PREÇO */
+.precos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--espaco-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: var(--espaco-4);
+  text-align: center;
+}
+
+.card-destaque {
+  border: 2px solid #e65100;
+}
+
+/* ritmo: título -> preço -> lista -> botão */
+.card-titulo {
+  margin-bottom: var(--espaco-2);
+}
+
+.card-preco {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e65100;
+  margin-bottom: var(--espaco-4);
+}
+
+.card-preco span {
+  font-size: 1rem;
+  color: #777;
+  font-weight: normal;
+}
+
+.card-lista {
+  list-style: none;
+  margin-bottom: var(--espaco-4);
+}
+
+.card-lista li {
+  padding: var(--espaco-1) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.botao {
+  display: inline-block;
+  padding: var(--espaco-2) var(--espaco-4);
+  background: #e65100;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #bf360c;
+}
