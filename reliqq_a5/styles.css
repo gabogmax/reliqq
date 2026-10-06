@@ -1,0 +1,173 @@
+/* ==========================================
+   HIERARQUIA TIPOGRÁFICA: RELIQQ
+   Escala modular 1.25 (terça maior), base 16px
+   ========================================== */
+
+:root {
+  /* Cores */
+  --cor-fundo: #f5f0e8;
+  --cor-texto: #2b2b2b;
+  --cor-texto-suave: #6b6256;
+  --cor-destaque: #8b5e3c;
+  --cor-card: #e9e1d3;
+
+  /* Fontes */
+  --fonte-titulo: 'Fraunces', Georgia, serif;
+  --fonte-texto: 'Inter', system-ui, sans-serif;
+
+  /* Escala de tamanhos (1.25x) */
+  --tam-caption: 0.8rem;                        /* ~13px */
+  --tam-corpo: 1rem;                            /* 16px  */
+  --tam-lead: 1.25rem;                          /* 20px  */
+  --tam-h3: 1.25rem;                            /* 20px  */
+  --tam-h2: 1.953rem;                           /* ~31px */
+  --tam-h1: clamp(2.2rem, 6vw, 3.052rem);       /* 35 a 49px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  font-size: var(--tam-corpo);
+  line-height: 1.7;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: 64px 24px;
+}
+
+/* Coluna de leitura: ~65 caracteres por linha */
+.artigo {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+/* NÍVEL 1: H1 */
+h1 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-h1);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+/* NÍVEL 2: H2 */
+h2 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-h2);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 56px;
+  margin-bottom: 16px;
+}
+
+/* NÍVEL 3: H3 (sans-serif, para diferenciar de H2) */
+h3 {
+  font-family: var(--fonte-texto);
+  font-size: var(--tam-h3);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  color: var(--cor-destaque);
+}
+
+/* Categoria acima do título */
+.categoria {
+  font-size: var(--tam-caption);
+  font-weight: 600;
+  color: var(--cor-destaque);
+  margin-bottom: 8px;
+}
+
+/* Autoria abaixo do título */
+.autoria {
+  font-size: var(--tam-caption);
+  color: var(--cor-texto-suave);
+  margin-bottom: 32px;
+}
+
+/* Parágrafo de abertura */
+.lead {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-lead);
+  line-height: 1.55;
+  margin-bottom: 32px;
+}
+
+/* TEXTO CORRIDO */
+p {
+  margin-bottom: 16px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: var(--cor-destaque);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--cor-texto);
+}
+
+ul {
+  margin: 0 0 16px 24px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* CITAÇÃO */
+blockquote {
+  margin: 32px 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--cor-destaque);
+}
+
+blockquote p {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: 1.563rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+blockquote cite {
+  font-size: var(--tam-caption);
+  font-style: normal;
+  color: var(--cor-texto-suave);
+}
+
+/* FIGURA E LEGENDA */
+figure {
+  margin: 32px 0;
+}
+
+.figura-placeholder {
+  aspect-ratio: 16 / 9;
+  background: var(--cor-card);
+}
+
+figcaption {
+  font-size: var(--tam-caption);
+  line-height: 1.5;
+  color: var(--cor-texto-suave);
+  margin-top: 8px;
+}
+
+/* NOTA DE RODAPÉ */
+.nota {
+  font-size: var(--tam-caption);
+  color: var(--cor-texto-suave);
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--cor-card);
+}
