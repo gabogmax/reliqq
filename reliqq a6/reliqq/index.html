@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELIQQ | Nova Coleção</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">RELIQQ</div>
+        <nav>
+            <ul>
+                <li><a href="#colecao">Coleção</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <p class="hero-tag">Nova Coleção</p>
+        <h1>RELIQQ</h1>
+        <p>Peças pensadas para o seu dia a dia.</p>
+    </div>
+
+    <main>
+
+        <section id="colecao">
+
+            <!-- Coleção 1: carrossel à esquerda, texto à direita -->
+            <div class="colecao">
+                <div class="carrossel">
+                    <button class="seta seta-esq" aria-label="Anterior">‹</button>
+                    <div class="produtos">
+                        <a class="produto" href="colecao-antigas.html" aria-label="Ver sessão de fotos da coleção roupas antigas"><img draggable="false" src="img/baby-tee.svg" alt="Baby tee branca com estrela azul"><span class="ver">Ver sessão de fotos →</span></a>
+                        <a class="produto" href="colecao-antigas.html" aria-label="Ver sessão de fotos da coleção roupas antigas"><img draggable="false" src="img/jeans.svg" alt="Jeans marrom de cintura baixa"><span class="ver">Ver sessão de fotos →</span></a>
+                        <a class="produto" href="colecao-antigas.html" aria-label="Ver sessão de fotos da coleção roupas antigas"><img draggable="false" src="img/butterfly.svg" alt="Top borboleta"><span class="ver">Ver sessão de fotos →</span></a>
+                    </div>
+                    <button class="seta seta-dir" aria-label="Próximo">›</button>
+                    <div class="pontos" aria-hidden="true"></div>
+                </div>
+
+                <div class="colecao-info">
+                    <h2>Coleção roupas antigas</h2>
+                    <p>Garimpos dos anos 2000 com cintura baixa, estrelas e borboletas, escolhidos um a um.</p>
+                    <a class="botao" href="colecao-antigas.html">Ver sessão de fotos</a>
+                </div>
+            </div>
+
+            <!-- Coleção 2: texto à esquerda, carrossel à direita -->
+            <div class="colecao invertida">
+                <div class="colecao-info">
+                    <h2>Coleção roupas customizadas</h2>
+                    <p>Peças únicas com patches, correntes e bordados feitos à mão no nosso ateliê.</p>
+                    <a class="botao" href="colecao-customizadas.html">Ver sessão de fotos</a>
+                </div>
+
+                <div class="carrossel">
+                    <button class="seta seta-esq" aria-label="Anterior">‹</button>
+                    <div class="produtos">
+                        <a class="produto" href="colecao-customizadas.html" aria-label="Ver sessão de fotos da coleção roupas customizadas"><img draggable="false" src="img/jaqueta.svg" alt="Jaqueta cropped com patches"><span class="ver">Ver sessão de fotos →</span></a>
+                        <a class="produto" href="colecao-customizadas.html" aria-label="Ver sessão de fotos da coleção roupas customizadas"><img draggable="false" src="img/mini-saia.svg" alt="Mini saia com correntes"><span class="ver">Ver sessão de fotos →</span></a>
+                        <a class="produto" href="colecao-customizadas.html" aria-label="Ver sessão de fotos da coleção roupas customizadas"><img draggable="false" src="img/bolsa.svg" alt="Bolsa baguete"><span class="ver">Ver sessão de fotos →</span></a>
+                    </div>
+                    <button class="seta seta-dir" aria-label="Próximo">›</button>
+                    <div class="pontos" aria-hidden="true"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="sobre">
+            <a class="sobre-foto" href="sobre.html" aria-label="Conheça a história do RELIQQ">
+                <img src="img/sobre.svg" alt="Equipe RELIQQ: ABC paulista e zona oeste de São Paulo" draggable="false">
+                <span class="ver">Conheça nossa história →</span>
+            </a>
+            <h2>Sobre Nós</h2>
+            <p>O RELIQQ é o resultado do encontro do ABC paulista com a zona oeste de São Paulo, na Fatec de Carapicuíba.</p>
+        </section>
+
+
+    </main>
+
+    <footer id="contato">
+        <p>&copy; 2026 RELIQQ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="chat.js"></script>
+</body>
+</html>
