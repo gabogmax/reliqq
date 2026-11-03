@@ -1,0 +1,75 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: #f1f2f6;
+}
+
+/* CARD: um único bloco, com a imagem no topo (primeiro olhar) */
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1);
+}
+
+.card-img { position: relative; }
+.card-img svg { display: block; width: 100%; height: auto; }
+
+/* NÍVEL 1 (chama a atenção primeiro): selo de desconto, vermelho vivo */
+.tag {
+  position: absolute; top: 12px; left: 12px;
+  background: #ff4757; color: #fff;
+  padding: 4px 12px; border-radius: 4px;
+  font-size: 12px; font-weight: 700;
+}
+
+.card-body { padding: 24px; }
+
+/* NÍVEL 4 (apoio): categoria pequena, cinza claro, caixa alta */
+.categoria {
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: #747d8c; margin-bottom: 6px;
+}
+
+/* NÍVEL 2: nome do produto, grande e na cor mais escura */
+h1 { font-size: 24px; line-height: 1.2; font-weight: 700; color: #2f3542; margin-bottom: 8px; }
+
+.avaliacao { font-size: 14px; color: #f59e0b; margin-bottom: 16px; }
+.avaliacao span { color: #747d8c; font-size: 13px; }
+
+/* NÍVEL 1: preço, o maior texto do card e em verde vivo */
+.preco { font-size: 36px; font-weight: 800; color: #0f9d58; line-height: 1; }
+.centavos { font-size: 18px; vertical-align: top; position: relative; top: 4px; }
+
+/* NÍVEL 5: preço antigo pequeno, cinza e riscado (some do foco) */
+.preco-antigo { margin-left: 8px; font-size: 16px; font-weight: 400; color: #a4b0be; text-decoration: line-through; }
+
+.parcela { font-size: 14px; color: #57606f; margin: 6px 0 16px; }
+
+/* NÍVEL 4: descrição em cinza médio, tamanho normal */
+.descricao { font-size: 15px; line-height: 1.5; color: #747d8c; margin-bottom: 24px; }
+
+/* NÍVEL 1: botão principal, largo e na cor mais forte */
+.btn-principal {
+  width: 100%; padding: 14px; border: none; border-radius: 8px;
+  background: #3742fa; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer;
+  transition: background .2s;
+}
+.btn-principal:hover { background: #2b34c9; }
+
+/* NÍVEL 3: ação secundária, só texto, sem destaque */
+.btn-secundario {
+  display: block; text-align: center; margin-top: 12px;
+  font-size: 14px; color: #3742fa; text-decoration: none;
+}
+.btn-secundario:hover { text-decoration: underline; }
+
+a:focus-visible, button:focus-visible { outline: 3px solid #3742fa; outline-offset: 3px; }

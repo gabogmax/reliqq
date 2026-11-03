@@ -1,0 +1,56 @@
+/* PALETA: 5 cores, todas com contraste mínimo de 4,5:1 com texto branco */
+:root {
+  --primaria:   #1D4ED8; /* azul: confiança, ações principais */
+  --secundaria: #0F766E; /* verde-azulado: apoio, destaques */
+  --sucesso:    #15803D; /* verde: receitas, confirmações */
+  --erro:       #DC2626; /* vermelho: despesas, erros */
+  --neutra:     #1F2937; /* cinza-escuro: textos, bordas */
+
+  /* tons claros derivados das mesmas cores (fundos) */
+  --fundo:      #F3F4F6;
+  --borda:      #D1D5DB;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--neutra);
+  padding: 40px 20px;
+}
+
+main { max-width: 640px; margin: 0 auto; }
+h1 { font-size: 1.6rem; margin-bottom: 4px; }
+h2 { font-size: 1.2rem; margin: 40px 0 16px; }
+.intro { color: #4B5563; margin-bottom: 24px; }
+
+/* AMOSTRAS */
+.colors { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
+.swatch {
+  min-height: 140px; padding: 16px; border-radius: 12px; color: #fff;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 2px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+}
+.swatch span { font-family: monospace; font-size: .95rem; }
+.swatch small { font-size: .8rem; opacity: .95; }
+.primary   { background: var(--primaria); }
+.secondary { background: var(--secundaria); }
+.success   { background: var(--sucesso); }
+.danger    { background: var(--erro); }
+.neutral   { background: var(--neutra); }
+
+/* MINI APP usando a paleta */
+.app { background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 24px; }
+.saldo-label { font-size: .85rem; color: #4B5563; }
+.saldo { font-size: 2.2rem; font-weight: 800; color: var(--primaria); margin-bottom: 20px; }
+
+.lista { list-style: none; margin-bottom: 24px; }
+.lista li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--borda); }
+.receita { color: var(--sucesso); }
+.despesa { color: var(--erro); }
+
+button { padding: 12px 20px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-right: 8px; }
+.btn-primario { background: var(--primaria); color: #fff; border: 2px solid var(--primaria); }
+.btn-secundario { background: #fff; color: var(--secundaria); border: 2px solid var(--secundaria); }
+button:focus-visible { outline: 3px solid var(--neutra); outline-offset: 3px; }
